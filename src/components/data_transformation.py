@@ -30,7 +30,7 @@ class DataTransformation:
         """
         try:
             numerical_features = ['reading_score', 'writing_score']
-            categorical_features = ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+            categorical_features = ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course',]
 
             num_pipeline=Pipeline(
                 steps=[
@@ -93,7 +93,7 @@ class DataTransformation:
                 obj=preprocessing_obj
             )
 
-            return(train_arr,test_arr,self.data_transformation_config.preprocessor_obj_file_path,)
+            return(train_arr,test_arr,self.data_transformation_config.preprocessor_obj_file_path)
         
         except Exception as e:
             raise CustomException(e,sys)
